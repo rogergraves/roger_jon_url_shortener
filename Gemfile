@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'devise', '1.1.rc0'
 
 gem 'devise', '~> 2.0'
 
