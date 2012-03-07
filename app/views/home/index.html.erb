@@ -1,14 +1,17 @@
-<p>Hello <%= current_user.email %>!</p>
 
+<%= homepage_links %>
 
-
-
-<% if signed_in? %>
-<%= link_to "Sign out", destroy_user_session_path(:user), :method => :delete %><br />
-
-<% else %>
-<%= link_to "Sign up", new_registration_path(:user) %><br />
-<%= link_to "Sign in", new_session_path(:user) %><br />
+<% if user_signed_in? %>
+	<p>
+		<%= form_tag(:method => "post") do %>
+		  <%= label_tag(:url, "Create short URL:") %>
+		  <%= text_field_tag(:url) %>
+		  <%= submit_tag("Create") %>
+		<% end %>
+	</p>
 <% end %>
 
-<%#= render "./devise/links" %>
+
+Last entered URL: <%= params[:url] %>
+
+
