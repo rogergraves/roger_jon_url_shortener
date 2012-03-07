@@ -1,1 +1,14 @@
-<p>Hello world</p>
+<p>Hello <%= current_user.email %>!</p>
+
+
+
+
+<% if signed_in? %>
+<%= link_to "Sign out", destroy_user_session_path(:user), :method => :delete %><br />
+
+<% else %>
+<%= link_to "Sign up", new_registration_path(:user) %><br />
+<%= link_to "Sign in", new_session_path(:user) %><br />
+<% end %>
+
+<%#= render "./devise/links" %>
