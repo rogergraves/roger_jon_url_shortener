@@ -3,7 +3,7 @@
 
 <% if user_signed_in? %>
 	<p>
-		<%= form_tag(:method => "post") do %>
+		<%= form_tag("/addurl", :method => "post") do %>
 		  <%= label_tag(:url, "Create short URL:") %>
 		  <%= text_field_tag(:url) %>
 		  <%= submit_tag("Create") %>

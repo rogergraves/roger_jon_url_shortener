@@ -1,0 +1,2 @@
+class AddurlController < ApplicationController
+end
