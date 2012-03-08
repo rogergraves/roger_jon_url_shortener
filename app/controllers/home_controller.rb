@@ -8,4 +8,9 @@ class HomeController < ApplicationController
      end
   end
   
+  def create
+    logger.info "HomeController.create CALLED!!!!!!!!!!!!!!!!!!"
+    render "index"
+  end
+  
 end

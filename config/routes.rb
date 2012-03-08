@@ -5,9 +5,7 @@ RogerJonUrlShortener::Application.routes.draw do
   #match ':addurl' => ''
   root :to => "home#index"
   
-  resources :url
-  
-  #match ':new_url_path' => 'url#new'
+  match 'add_url' => 'home#create'
   
   
 
