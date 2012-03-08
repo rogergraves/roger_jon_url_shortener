@@ -4,7 +4,7 @@
 <% if user_signed_in? %>
 	<p>
 		<%= form_for :add_url, :url => url_for(:controller => 'home', :action => 'create') do |f| %>
-		    <%= label_tag(:url, "Create short URL:") %>
+		    <%= label_tag(:url, "Create short URL: http://") %>
 			  <%= text_field_tag(:url) %>
 			  <%= submit_tag("Create") %>
 		<% end %>
