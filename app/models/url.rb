@@ -2,6 +2,8 @@ class Url < ActiveRecord::Base
   validates :longurl, :user_id, :presence => true
   has_many :comments, :dependent => :destroy
   
+  belongs_to :user
+  
   before_create :add_http, :add_random_shorturl
   
   private

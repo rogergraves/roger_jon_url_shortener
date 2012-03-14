@@ -21,9 +21,17 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rspec-rails'
+
+group :test do
+  gem 'factory_girl_rails', '~> 1.7.0'
+  gem "rspec2-rails-views-matchers", "~> 0.2.2"
+  #gem "capybara", "~> 1.1.2"
+end
 
 group :development do
-  gem 'sqlite3', '1.3.5'
+	gem 'sqlite3', '1.3.5'
+	gem 'annotate'
 end
 
 group :production do

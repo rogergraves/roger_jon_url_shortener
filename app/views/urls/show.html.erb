@@ -1,2 +1,7 @@
-<h1>Urls#show</h1>
-<p>Find me in app/views/urls/show.html.erb</p>
+<%= link_to "Go back", root_path %>
+
+<h1><%= format_short_url @url.shorturl %> =&gt;&gt; <%= @url.longurl %></h1>
+
+<% @comments.each do |comment| %>
+<p><%= comment.comment %></p>
+<% end %>
